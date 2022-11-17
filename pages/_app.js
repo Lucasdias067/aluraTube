@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ThemeProvider } from "styled-components";
 import ColorModeProvider, { ColorModeContext } from "../src/components/Menu/components/ColorMode";
 import RegisterVideo from "../src/components/RegisterVideo";
@@ -29,7 +29,7 @@ function ProviderWrapper(props) {
 }
 
 function MyApp({ Component, pageProps }) {
-    const contexto = React.useContext(ColorModeContext);
+    const contexto = useContext(ColorModeContext);
     return (
         <ThemeProvider theme={theme[contexto.mode]}>
             <Component {...pageProps} />

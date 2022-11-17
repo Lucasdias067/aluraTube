@@ -3,16 +3,16 @@ import styled from 'styled-components';
 import Menu from '../src/components/Menu';
 import { StyledTimeline } from '../src/styles/Timeline';
 import Banner from '../src/assets/Banner.jpg'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Reset } from '../src/components/Menu/Reset';
 import { videoService } from '../src/services/videoServices';
 
 function HomePage() {
-  const [valorDoFiltro, setValorDoFiltro] = React.useState('');
-  const [playlists, setPlaylists] = React.useState({});
+  const [valorDoFiltro, setValorDoFiltro] = useState('');
+  const [playlists, setPlaylists] = useState({});
   const service = videoService();
 
-  React.useEffect(() => {
+  useEffect(() => {
     service
       .getAllVideos(setPlaylists)
   }, []);

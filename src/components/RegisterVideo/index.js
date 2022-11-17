@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyledRegisterVideo } from "./styles";
 import { videoService } from '../../services/videoServices.js';
 import { createClient } from "@supabase/supabase-js";
 
 function useForm({ initialValues }) {
-  const [values, setValues] = React.useState(initialValues);
+  const [values, setValues] = useState(initialValues);
 
   return {
     values, handleChange(e) {
@@ -20,7 +20,7 @@ function useForm({ initialValues }) {
 
 export default function RegisterVideo() {
   const form = useForm({ initialValues: { titulo: '', url: '', playlist: '',} });
-  const [formVisivel, setformVisivel] = React.useState(false);
+  const [formVisivel, setformVisivel] = useState(false);
   const PROJECT_URL = 'https://fwrkrlbgrdsacsjzjyfp.supabase.co'
   const PUBLIC_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ3cmtybGJncmRzYWNzanpqeWZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjgzODk1OTIsImV4cCI6MTk4Mzk2NTU5Mn0.TNKw_ndwn1A4rWkNu-0tNCfjKWJ72swLcBCDFKU79o4'
   const supabase = createClient(PROJECT_URL, PUBLIC_KEY)
