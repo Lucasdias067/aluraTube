@@ -1,8 +1,8 @@
 # 👨🏽‍💻 ALURA TUBE
 
-![Alura Books e mais 10 páginas - Pessoal — Microsoft​ Edge 27_10_2022 17_29_46](https://user-images.githubusercontent.com/101364762/198393658-45a1ba12-bcfc-4d95-bdf9-f30186e91f9f.png)
+![1](https://user-images.githubusercontent.com/101364762/202537964-e092a9b9-f8bd-4533-9820-015c0a7ca010.png)
 
-![Alura Books e mais 10 páginas - Pessoal — Microsoft​ Edge 27_10_2022 17_29_51](https://user-images.githubusercontent.com/101364762/198393672-306b116c-f1aa-4a83-9771-3dde077c0ec3.png)
+![2](https://user-images.githubusercontent.com/101364762/202537978-503753f3-f061-461d-9db4-07a76a223877.png)
 
 Podemos filtrar os livros conforme o que queremos ver clicando nos botões acima.
 
