@@ -10,11 +10,11 @@ Podemos fazer algumas interações no site, como filtrar os vídeos no campo de 
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- ReactJS / NextJS,
-- ContexAPI,
-- Styled Components,
-- React Hooks (useState, useEffect, useContext),
-- Componentes e props,
+- ReactJS / NextJS
+- ContexAPI
+- Styled Components
+- React Hooks (useState, useEffect, useContext)
+- Componentes e props
 - Supabase (database)
 
 
