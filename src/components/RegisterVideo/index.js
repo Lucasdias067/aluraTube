@@ -30,30 +30,31 @@ export default function RegisterVideo() {
     setformVisivel(!formVisivel)
   }
 
+  function onSubmit(e) {
+    e.preventDefault();
+
+    supabase.from('video').insert({
+      title: form.values.titulo,
+      url: form.values.url,
+      thumb: service.getThumbnail(form.values.url),
+      playlist: form.values.playlist
+    })
+      .then(result => {
+        console.log(result)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+
+    displayForm();
+    form.clearForm()
+  }
+
   return (
     <StyledRegisterVideo>
       <button className="add-video" onClick={displayForm}>+</button>
       {formVisivel && (
-        <form onSubmit={(e) => {
-          e.preventDefault();
-
-          supabase.from('video').insert({
-            title: form.values.titulo,
-            url: form.values.url,
-            thumb: service.getThumbnail(form.values.url),
-            playlist: form.values.playlist
-          })
-            .then(result => {
-              console.log(result)
-            })
-            .catch(err => {
-              console.log(err)
-            })
-
-          displayForm();
-          form.clearForm()
-
-        }}>
+        <form onSubmit={onSubmit}>
           <div>
             <div>
               <a href={form.values.url} key={form.values.url}>
